@@ -20,4 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('kategori', KategoriController::class);
-Route::resource('produk', ProdukController::class);
+// Route::resource('produk', ProdukController::class);
