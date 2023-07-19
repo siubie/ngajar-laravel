@@ -21,3 +21,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('kategori', KategoriController::class, ['as' => 'api']);
 // Route::apiResource('kategori', KategoriController::class);
+
+/**
+* You can also do this if you've many API Routes.
+* This will wrap your entire API Resource and put the prefix as 'api.'
+*/
+Route::name('api.')->group(function(){
+
+    Route::apiResource('post', PostController::class);
+    Route::apiResource('comment', CommentController::class);
+
+    Route::apiResource('users', UserController::class);
+
+    Route::apiResource('lesson', LessonController::class);
+    
+});
